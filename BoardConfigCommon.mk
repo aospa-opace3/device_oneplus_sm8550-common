@@ -51,13 +51,14 @@ TARGET_PROVIDES_AUDIO_HAL := true
 TARGET_PROVIDES_LIBAGM := true
 TARGET_PROVIDES_LIBAR_PAL := true
 
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := kalama
-
 # Boot
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
+
+# Build hacks
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # DTB / DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -69,9 +70,6 @@ TARGET_ODM_PROP += $(COMMON_PATH)/configs/props/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/configs/props/product.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/configs/props/system_ext.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/props/vendor.prop
-
-# Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
@@ -146,8 +144,6 @@ TARGET_BOARD_PLATFORM := kalama
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
-BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
--include vendor/lineage/config/BoardConfigReservedSize.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 201326592
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
@@ -189,6 +185,11 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
+
+# UFS
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
