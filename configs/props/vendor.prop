@@ -66,9 +66,6 @@ ro.bluetooth.a2dp_offload.supported=true
 # Camera
 vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
 
-# Chipset
-ro.soc.manufacturer=QTI
-
 # DPM
 persist.vendor.dpm.vndr.idletimer.mode=default
 persist.vendor.dpm.vndr.halservice.enable=1
