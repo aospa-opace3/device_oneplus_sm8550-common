@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) Nameless-AOSP Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Whether device has physical tri state switch -->
+    <bool name="config_hasAlertSlider">true</bool>
+
+     <!-- The location of the devices physical tri state switch
+          0: Left side
+          1: Right side -->
+     <integer name="config_alertSliderLocation">1</integer>
+
+    <!-- Expose aux camera to other packages -->
+    <string name="oplus_camera_aux_packages">com.ss.android.ugc.aweme,com.ss.android.ugc.trill,com.zhiliaoapp.musically,com.shopmoment.momentprocamera,com.blink.academy.protake,org.codeaurora.snapcam,troop.com.freedcam,net.sourceforge.opencamera,com.caddish_hedgehog.hedgecam2,com.filmic.filmicpro,com.filmic.filmicpro.test,com.filmic.firstlight</string>
+    <string name="oplus_camera_aux_packages_startwith">com.google.android.GoogleCamera</string>
+
+</resources>
