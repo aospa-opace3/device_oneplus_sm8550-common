@@ -177,9 +177,11 @@ PRODUCT_PACKAGES += \
     IPACM_Filter_cfg.xml
 
 # Init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
 PRODUCT_PACKAGES += \
-    fstab.default \
-    fstab.default.vendor_ramdisk \
+    fstab.qcom \
     init.class_main.sh \
     init.kernel.post_boot.sh \
     init.kernel.post_boot-kalama.sh \
