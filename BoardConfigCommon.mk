@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 COMMON_PATH := device/oneplus/sm8550-common
 
 # A/B
@@ -63,6 +66,9 @@ BOARD_RAMDISK_USE_LZ4 := true
 # DTB / DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_NEEDS_DTBOIMAGE := true
+
+# Display
+TARGET_SUPPORTS_LTPO := true
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
