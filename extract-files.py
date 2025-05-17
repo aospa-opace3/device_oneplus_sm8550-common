@@ -42,6 +42,7 @@ lib_fixups: lib_fixups_user_type = {
     (
         'libpwirisfeature',
         'libpwirishalwrapper',
+        'vendor.oplus.hardware.radio-V2-ndk',
     ): lib_fixup_odm_suffix,
     (
         'com.qualcomm.qti.dpm.api@1.0',
@@ -59,6 +60,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.pixelworks.hardware.feature@1.1',
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.dpmservice@1.0',
+        'vendor.qti.hardware.fm@1.0',
         'vendor.qti.hardware.qccsyshal@1.0',
         'vendor.qti.hardware.qccsyshal@1.1',
         'vendor.qti.hardware.qccsyshal@1.2',
@@ -75,6 +77,7 @@ lib_fixups: lib_fixups_user_type = {
         'libagmclient',
         'libpalclient',
         'vendor.qti.hardware.AGMIPC@1.0-impl',
+        'libwpa_client',
     ): lib_fixup_remove,
 }
 
@@ -85,12 +88,10 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
-    'system_ext/bin/wfdservice64': blob_fixup()
-        .add_needed('libwfdservice_shim.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
         .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so'),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
-        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
+        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V3-cpp.so'),
     ('vendor/bin/hw/android.hardware.security.keymint-service-qti', 'vendor/lib64/libqtikeymint.so'): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/etc/media_codecs_kalama.xml': blob_fixup()
