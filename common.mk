@@ -402,10 +402,7 @@ PRODUCT_COPY_FILES += \
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/oplus/vintf/device_framework_matrix.xml \
-    vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml \
-    vendor/sun/config/device_framework_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/oneplus/sm8550-common/framework_manifest.xml
-DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
+
 DEVICE_MANIFEST_FILE := \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml \
