@@ -276,6 +276,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Platform
+TARGET_BOARD_PLATFORM := kalama
+TARGET_BOOTLOADER_BOARD_NAME := kalama
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
