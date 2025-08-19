@@ -53,9 +53,9 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.kalama \
     vendor.qti.hardware.AGMIPC@1.0-impl
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
+AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 CONFIG_HAL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/kalama
-CONFIG_PAL_SRC_DIR := $(AUDIO_HAL_DIR)/../pal/configs/kalama
+CONFIG_PAL_SRC_DIR := $(AUDIO_HAL_DIR)/../../pal/configs/kalama
 
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
