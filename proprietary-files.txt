@@ -979,11 +979,6 @@ vendor/lib64/libQnnHtpV73Stub.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libQnnSystem.so
 vendor/lib64/libqnnengine.so
 
-# NFC
-odm/etc/nfc/libnfc-mtp-SN100.conf_22861:vendor/etc/libnfc-nxp.conf
-odm/etc/nfc/libnfc-nci.conf_22861:vendor/etc/libnfc-nci.conf
-odm/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
-
 # OPLUS Charger
 odm/bin/hw/vendor.oplus.hardware.charger-V6-service
 odm/etc/init/vendor.oplus.hardware.charger-V6-service.rc
