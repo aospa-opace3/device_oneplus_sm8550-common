@@ -23,6 +23,7 @@ namespace_imports = [
     'hardware/qcom-caf/sm8550',
     'hardware/qcom-caf/wlan',
     'hardware/oplus',
+    'vendor/oneplus/aston',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
