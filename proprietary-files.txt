@@ -969,7 +969,7 @@ odm/lib64/libQnnHtpV73Stub.so
 odm/lib64/libQnnSaver.so
 odm/lib64/libaiboost_qnn_sr.so
 odm/lib64/libaiboost_sr.so
-odm/lib64/libaiboost_te.so
+odm/lib64/libaiboost_te.so;FIX_SONAME
 odm/lib64/libaiboost_ubwc.so
 vendor/lib64/libQnnCpu.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libQnnHtp.so;MODULE_SUFFIX=_vendor
