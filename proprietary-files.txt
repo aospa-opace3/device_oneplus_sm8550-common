@@ -1505,14 +1505,6 @@ odm/etc/init/init.touchDaemon.rc
 odm/etc/init/vendor-oplus-hardware-touch-V2-service.rc
 odm/etc/vintf/manifest/manifest_touch_aidl.xml
 
-# UFS
-odm/firmware/ufs/SAMSUNG-KLUDG4UHDC-B0E1.bin
-odm/firmware/ufs/SAMSUNG-KLUEG4RHHD-B0G1.bin
-odm/firmware/ufs/SAMSUNG-KLUEG8UHDC-B0E1.bin
-odm/firmware/ufs/SAMSUNG-KLUFG8RHDB-B0E1.bin
-odm/firmware/ufs/SAMSUNG-KLUFG8RHHD-B0G1.bin
-odm/firmware/ufs/move_target_ufs_fw_to_oplusreserve1.sh
-
 # Vibrator
 vendor/lib64/libaacvibrator.so
 
