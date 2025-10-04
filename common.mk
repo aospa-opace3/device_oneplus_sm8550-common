@@ -266,6 +266,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
+    android.hardware.power@1.2.vendor \
     liboplus-uah-client
 
 PRODUCT_COPY_FILES += \
@@ -275,6 +276,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     qspa_vendor.rc \
     vendor.qti.qspa-service
+
+# QTI common components
+TARGET_COMMON_QTI_COMPONENTS := \
+    perf
 
 # Sensors
 PRODUCT_PACKAGES += \
