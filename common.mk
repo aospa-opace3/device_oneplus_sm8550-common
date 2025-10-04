@@ -202,7 +202,6 @@ $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
-$(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-sun
@@ -250,6 +249,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     media \
     nfc \
+    overlay \
     perf \
     telephony \
     wfd \
