@@ -150,9 +150,6 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.osense.client-service \
     vendor.oplus.hardware.performance-service
 
-# OPlus fwk
-$(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
-
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
 
