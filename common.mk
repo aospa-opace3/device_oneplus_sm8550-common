@@ -124,7 +124,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    android.hardware.drm@1.3.vendor
 
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
@@ -299,7 +300,8 @@ PRODUCT_PACKAGES += \
 # QTI common components
 TARGET_COMMON_QTI_COMPONENTS := \
     perf \
-    telephony
+    telephony \
+    wfd
 
 # QTI fwk-detect
 PRODUCT_PACKAGES += \
