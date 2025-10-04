@@ -209,7 +209,6 @@ $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
-$(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
@@ -217,12 +216,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    FrameworksResTarget \
     NcmTetheringOverlay \
     OPlusFrameworksResCommon \
     OPlusSettingsResCommon \
-    OPlusSystemUIResCommon \
-    WifiResTarget
+    OPlusSystemUIResCommon
 
 # Partitions
 PRODUCT_PACKAGES += \
@@ -257,6 +254,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     media \
     nfc \
+    overlay \
     perf \
     telephony \
     wfd \
