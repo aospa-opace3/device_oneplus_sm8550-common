@@ -251,6 +251,7 @@ PRODUCT_PACKAGES += \
 # QTI common components
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
+    alarm \
     av \
     display \
     gps \
