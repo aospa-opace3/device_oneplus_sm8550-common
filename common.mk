@@ -163,22 +163,16 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
 
 # Init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
+
 PRODUCT_PACKAGES += \
     fstab.default \
     fstab.default.vendor_ramdisk \
-    init.class_main.sh \
-    init.kernel.post_boot.sh \
-    init.kernel.post_boot-kalama.sh \
     init.oplus.rc \
-    init.qcom.early_boot.sh \
-    init.qcom.rc \
-    init.qcom.recovery.rc \
-    init.qcom.sh \
     init.qti.display_boot.rc \
-    init.qti.kernel.rc \
     init.target.rc \
-    ueventd.oplus.rc \
-    ueventd.qcom.rc
+    ueventd.oplus.rc
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 
@@ -252,6 +246,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     display \
     gps \
+    init \
     media \
     nfc \
     overlay \
