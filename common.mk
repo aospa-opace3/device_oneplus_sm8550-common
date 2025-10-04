@@ -260,6 +260,7 @@ PRODUCT_PACKAGES += \
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     display \
+    overlay \
     perf \
     wfd \
     wlan
