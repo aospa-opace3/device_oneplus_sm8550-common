@@ -249,12 +249,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     NrModeSwitcher
 
-# Sun services
-PRODUCT_PACKAGES += \
-    vendor.sun.hardware.battery-service.oplus \
-    vendor.sun.hardware.displayfeature-service.oplus \
-    vendor.sun.hardware.vibratorExt-service.oplus
-
 # OPlus dummy services
 PRODUCT_PACKAGES += \
     vendor.oplus.hardware.commondcs-service \
@@ -404,12 +398,10 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator.service-stub-richtap
+    android.hardware.vibrator.service.oplus-richtap
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-
-$(call soong_config_set, STUB_VIBRATOR_HAL, USE_RICHTAP_V2, true)
 
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
