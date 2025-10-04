@@ -235,6 +235,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     media \
     nfc \
+    overlay \
     perf \
     telephony \
     wfd \
