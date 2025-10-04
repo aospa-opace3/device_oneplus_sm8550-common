@@ -672,13 +672,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.imsrtpservice@3.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE_SUFFIX=_vendor
 
-# Kernel
-vendor/bin/init.qcom.class_core.sh
-vendor/bin/init.qcom.post_boot.sh
-vendor/bin/init.qti.kernel.sh
-vendor/bin/system_dlkm_modprobe.sh
-vendor/bin/vendor_modprobe.sh
-
 # Keymaster
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
@@ -845,7 +838,6 @@ vendor/lib64/vendor.qti.qesdsys-V3-ndk.so
 
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
-vendor/bin/init.qti.write.sh
 vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
