@@ -163,19 +163,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.class_main.sh \
-    init.kernel.post_boot.sh \
-    init.kernel.post_boot-kalama.sh \
     init.oplus.rc \
-    init.qcom.early_boot.sh \
-    init.qcom.rc \
-    init.qcom.recovery.rc \
-    init.qcom.sh \
     init.qti.display_boot.rc \
-    init.qti.kernel.rc \
     init.target.rc \
-    ueventd.oplus.rc \
-    ueventd.qcom.rc
+    ueventd.oplus.rc
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 
@@ -246,6 +237,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     display \
     gps \
+    init \
     media \
     nfc \
     overlay \
