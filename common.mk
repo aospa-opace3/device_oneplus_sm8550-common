@@ -142,9 +142,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:$(TARGET_COPY_OUT_ODM)/etc/gps.conf
 
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
@@ -272,6 +269,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     av \
     display \
+    gps \
     media \
     perf \
     telephony \
