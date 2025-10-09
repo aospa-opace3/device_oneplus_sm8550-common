@@ -123,8 +123,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.oplus.rc
 
-$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
-
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml
