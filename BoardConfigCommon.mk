@@ -153,5 +153,16 @@ BOARD_AVB_VENDOR_BOOT_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 6
 
+# VINTF
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    hardware/oplus/vintf/device_framework_matrix.xml
+
+DEVICE_MANIFEST_FILE += \
+    $(COMMON_PATH)/manifest_kalama.xml \
+    $(COMMON_PATH)/network_manifest.xml
+
+ODM_MANIFEST_FILES += \
+    $(COMMON_PATH)/network_manifest_odm.xml
+
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/sm8550-common/BoardConfigVendor.mk

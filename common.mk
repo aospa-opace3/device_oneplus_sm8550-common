@@ -290,17 +290,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
-# VINTF
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    hardware/oplus/vintf/device_framework_matrix.xml \
-
-DEVICE_MANIFEST_FILE := \
-    $(LOCAL_PATH)/manifest_kalama.xml \
-    $(LOCAL_PATH)/network_manifest.xml
-
-ODM_MANIFEST_FILES := \
-    $(LOCAL_PATH)/network_manifest_odm.xml
-
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
