@@ -133,9 +133,25 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.oplus.rc
 
-# Kernel
+# Kernel - dlkm
+TARGET_KERNEL_DLKM_DISABLE := false
+TARGET_KERNEL_DLKM_AUDIO_OVERRIDE := true
+TARGET_KERNEL_DLKM_BT_OVERRIDE := true
+TARGET_KERNEL_DLKM_CAMERA_OVERRIDE := true
+TARGET_KERNEL_DLKM_NFC_OVERRIDE := true
+TARGET_KERNEL_DLKM_DATA_OVERRIDE := true
+TARGET_KERNEL_DLKM_DISPLAY_OVERRIDE := true
+TARGET_KERNEL_DLKM_MM_DRV_OVERRIDE := true
+TARGET_KERNEL_DLKM_SECURE_MSM_OVERRIDE := true
+TARGET_KERNEL_DLKM_THERMAL_OVERRIDE := true
+TARGET_KERNEL_DLKM_TOUCH_OVERRIDE := true
+TARGET_KERNEL_DLKM_VIDEO_OVERRIDE := true
+TARGET_KERNEL_DLKM_WLAN_OVERRIDE := true
+TARGET_KERNEL_DLKM_MMRM_OVERRIDE := true
+
+# Kernel - module blocklist
 PRODUCT_COPY_FILES += \
-    kernel/oneplus/sm8550/modules.systemdlkm_blocklist.msm.kalama:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/system_dlkm.modules.blocklist
+    kernel_platform/msm-kernel/modules.systemdlkm_blocklist.msm.kalama:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/system_dlkm.modules.blocklist
 
 # Keymint
 PRODUCT_PACKAGES += \
