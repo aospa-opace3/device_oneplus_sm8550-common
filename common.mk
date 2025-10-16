@@ -388,19 +388,16 @@ PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # VINTF
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/oplus/vintf/device_framework_matrix.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/oneplus/sm8550-common/framework_manifest.xml
-DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := \
+DEVICE_MANIFEST_FILE += \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml \
-    $(LOCAL_PATH)/manifest_kalama.xml \
-    $(LOCAL_PATH)/network_manifest.xml
+    device/oneplus/sm8550-common/manifest_kalama.xml \
+    device/oneplus/sm8550-common/network_manifest.xml
 
-ODM_MANIFEST_FILES := \
-    $(LOCAL_PATH)/network_manifest_odm.xml
+ODM_MANIFEST_FILES += \
+    device/oneplus/sm8550-common/network_manifest_odm.xml
 
 # WiFi
 PRODUCT_PACKAGES += \
