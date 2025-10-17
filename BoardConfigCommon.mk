@@ -162,5 +162,8 @@ BOARD_AVB_VENDOR_BOOT_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 6
 
+# WLAN
+include device/qcom/wlan/kalama/BoardConfigWlan.mk
+
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/sm8550-common/BoardConfigVendor.mk
