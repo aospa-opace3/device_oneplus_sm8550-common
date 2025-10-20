@@ -20,7 +20,7 @@ using android::init::InitPropertySet;
  * than once should be set in a typical init script (e.g. init.oplus.hw.rc)
  * after the original property has been set.
  */
-void vendor_process_bootenv() {
+void vendor_load_properties() {
     auto hw_region_id = std::stoi(GetProperty("ro.boot.hw_region_id", "0"));
     auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
 
