@@ -409,16 +409,16 @@ PRODUCT_COPY_FILES += \
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/oplus/vintf/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/oneplus/sm8550-common/vintf/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += device/oneplus/sm8550-common/configs/vintf/framework_manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml \
-    $(LOCAL_PATH)/vintf/manifest_kalama.xml \
-    $(LOCAL_PATH)/vintf/network_manifest.xml
+    $(LOCAL_PATH)/configs/vintf/manifest_kalama.xml \
+    $(LOCAL_PATH)/configs/vintf/network_manifest.xml
 
 ODM_MANIFEST_FILES := \
-    $(LOCAL_PATH)/vintf/network_manifest_odm.xml
+    $(LOCAL_PATH)/configs/vintf/network_manifest_odm.xml
 
 # WiFi
 PRODUCT_PACKAGES += \
