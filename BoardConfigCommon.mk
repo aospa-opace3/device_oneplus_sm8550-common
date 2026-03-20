@@ -120,6 +120,7 @@ TARGET_KERNEL_EXT_MODULES := \
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
+QCOM_SOONG_NAMESPACE := hardware/qcom-caf/sm8550/display
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
