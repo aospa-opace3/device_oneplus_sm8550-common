@@ -63,13 +63,24 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.imsrtpservice@3.1',
+        'audio.primary.kalama',
+        'libagm',
+        'libar-pal',
+        'libdisplayconfig.qti',
+        'libhistogram',
+        'libPeripheralStateUtils',
+        'libqdutils',
+        'libsdmcore',
+        'libsdmdal',
+        'libsdmutils',
+        'vendor.qti.hardware.pal@1.0-impl',
     ): lib_fixup_vendor_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
     'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff': blob_fixup()
         .add_needed('libshims_aidl_fingerprint_v2.oplus.so'),
-    'odm/bin/hw/vendor.oplus.hardware.charger-V6-service': blob_fixup()
+    'odm/bin/hw/vendor.oplus.hardware.charger-V9-service': blob_fixup()
         .add_needed('libbase_shim.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
