@@ -111,22 +111,22 @@ odm/lib64/libtfa98xx.so
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/lib64/hw/audio.primary.kalama.so
+vendor/lib64/hw/audio.primary.kalama.so;MODULE_SUFFIX=_vendor;OVERRIDES=audio.primary.kalama
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libEvrcSwCodec.so
 vendor/lib64/libFlacSwDec.so
-vendor/lib64/libPeripheralStateUtils.so
+vendor/lib64/libPeripheralStateUtils.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libadm.so
-vendor/lib64/libagm.so
-vendor/lib64/libar-pal.so
+vendor/lib64/libagm.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libar-pal.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libdsd2pcm.so
 vendor/lib64/libmcs.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so;MODULE_SUFFIX=_vendor
 
 # Audio FX modules
 vendor/lib64/soundfx/libasphere.so
@@ -355,15 +355,15 @@ vendor/lib64/libhdrdynamicootf.so
 
 # Display (HWC)
 odm/etc/vintf/manifest/manifest_oplus_cwb.xml
-vendor/bin/hw/vendor.qti.hardware.display.composer-service;REQUIRED=vendor.qti.hardware.display.composer-service.rc,vendor.qti.hardware.display.composer-service.xml
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;MODULE_SUFFIX=_vendor;REQUIRED=vendor.qti.hardware.display.composer-service.rc,vendor.qti.hardware.display.composer-service.xml
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libcwb_qcom.so
-vendor/lib64/libdisplayconfig.qti.so
-vendor/lib64/libhistogram.so
-vendor/lib64/libqdutils.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmdal.so
-vendor/lib64/libsdmutils.so
+vendor/lib64/libdisplayconfig.qti.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libhistogram.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libqdutils.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libsdmcore.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libsdmdal.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libsdmutils.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
@@ -516,7 +516,7 @@ vendor/firmware/gmu_gen70e00.bin
 # GNSS
 odm/etc/izat.conf
 odm/etc/sap.conf
-vendor/bin/hw/android.hardware.gnss-aidl-service-qti
+vendor/bin/hw/android.hardware.gnss-aidl-service-qti;MODULE_SUFFIX=_vendor;OVERRIDES=android.hardware.gnss-aidl-service-qti
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/loc_launcher
@@ -542,32 +542,32 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/sec_config
 vendor/etc/xtwifi.conf
-vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
-vendor/lib64/libbatching.so
+vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so;MODULE_SUFFIX=_vendor;OVERRIDES=android.hardware.gnss-aidl-impl-qti
+vendor/lib64/libbatching.so;MODULE_SUFFIX=_vendor;OVERRIDES=libbatching
 vendor/lib64/libcacertclient.so
 vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libengineplugin.so
 vendor/lib64/libgdtap.so
-vendor/lib64/libgeofencing.so
-vendor/lib64/libgnss.so
+vendor/lib64/libgeofencing.so;MODULE_SUFFIX=_vendor;OVERRIDES=libgeofencing
+vendor/lib64/libgnss.so;MODULE_SUFFIX=_vendor;OVERRIDES=libgnss
 vendor/lib64/libgnsspps.so
-vendor/lib64/libgps.utils.so
+vendor/lib64/libgps.utils.so;MODULE_SUFFIX=_vendor;OVERRIDES=libgps.utils
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_api_wds.so
 vendor/lib64/libloc_base_util.so
-vendor/lib64/libloc_core.so
+vendor/lib64/libloc_core.so;MODULE_SUFFIX=_vendor;OVERRIDES=libloc_core
 vendor/lib64/libloc_eng_hub.so
 vendor/lib64/libloc_mq_client.so
 vendor/lib64/libloc_qwes_iface.so
 vendor/lib64/libloc_ril_client.so
 vendor/lib64/libloc_socket.so
 vendor/lib64/libloc_util.so
-vendor/lib64/liblocation_api.so
+vendor/lib64/liblocation_api.so;MODULE_SUFFIX=_vendor;OVERRIDES=liblocation_api
 vendor/lib64/liblocation_api_msg.so
 vendor/lib64/liblocation_client_api.so
 vendor/lib64/liblocation_integration_api.so

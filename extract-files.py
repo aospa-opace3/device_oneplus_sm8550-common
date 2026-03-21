@@ -33,13 +33,30 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
 ]
 
+vendor_suffix_odm_libs = {
+    'libPeripheralStateUtils',
+    'libagm',
+    'libar-pal',
+    'libdisplayconfig.qti',
+    'libhistogram',
+    'libqdutils',
+    'libsdmcore',
+    'libsdmdal',
+    'libsdmutils',
+}
+
 
 def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'odm' else None
 
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
-    return f'{lib}_{partition}' if partition == 'vendor' else None
+    return (
+        f'{lib}_vendor'
+        if partition == 'vendor'
+        or (partition == 'odm' and lib in vendor_suffix_odm_libs)
+        else None
+    )
 
 
 lib_fixups: lib_fixups_user_type = {
@@ -49,6 +66,7 @@ lib_fixups: lib_fixups_user_type = {
         'libpwirishalwrapper',
     ): lib_fixup_odm_suffix,
     (
+        'android.hardware.gnss-aidl-impl-qti',
         'com.qualcomm.qti.dpm.api@1.0',
         'com.qualcomm.qti.imscmservice@2.0',
         'com.qualcomm.qti.imscmservice@2.1',
@@ -57,10 +75,25 @@ lib_fixups: lib_fixups_user_type = {
         'com.qualcomm.qti.uceservice@2.1',
         'com.qualcomm.qti.uceservice@2.2',
         'com.qualcomm.qti.uceservice@2.3',
+        'libPeripheralStateUtils',
         'libQnnCpu',
         'libQnnHtp',
         'libQnnHtpPrepare',
         'libQnnHtpV73Stub',
+        'libagm',
+        'libar-pal',
+        'libbatching',
+        'libdisplayconfig.qti',
+        'libgeofencing',
+        'libgnss',
+        'libgps.utils',
+        'libhistogram',
+        'libloc_core',
+        'liblocation_api',
+        'libqdutils',
+        'libsdmcore',
+        'libsdmdal',
+        'libsdmutils',
         'vendor.display.postproc@1.0',
         'vendor.libdpmctmgr',
         'vendor.libdpmfdmgr',
@@ -107,12 +140,10 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.dpmservice@1.1',
         'vendor.qti.hardware.embmssl@1.0',
         'vendor.qti.hardware.embmssl@1.1',
-        'vendor.qti.latency@2.0',
-        'vendor.qti.latency@2.1',
-        'vendor.qti.latency@2.2',
         'vendor.qti.hardware.limits@1.0',
         'vendor.qti.hardware.limits@1.1',
         'vendor.qti.hardware.mwqemadapter@1.0',
+        'vendor.qti.hardware.pal@1.0-impl',
         'vendor.qti.hardware.qccsyshal@1.0',
         'vendor.qti.hardware.qccsyshal@1.1',
         'vendor.qti.hardware.qccsyshal@1.2',
@@ -147,7 +178,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.radio.uim_remote_client@1.0',
         'vendor.qti.hardware.radio.uim_remote_client@1.1',
         'vendor.qti.hardware.radio.uim_remote_client@1.2',
-        'vendor.qti.hardware.radio.uim_remote_client@1.0',
         'vendor.qti.hardware.radio.uim_remote_server@1.0',
         'vendor.qti.hardware.slmadapter@1.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
@@ -173,6 +203,9 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.ims.rcsuce@1.2',
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.imsrtpservice@3.1',
+        'vendor.qti.latency@2.0',
+        'vendor.qti.latency@2.1',
+        'vendor.qti.latency@2.2',
     ): lib_fixup_vendor_suffix,
 }
 
