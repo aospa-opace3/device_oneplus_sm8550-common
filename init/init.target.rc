@@ -182,7 +182,7 @@ service fan_control_turn_off /vendor/bin/fan_service 0
     disabled
     oneshot
 
-service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
+service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service_64
     override
     class hal
     user audioserver
@@ -193,6 +193,15 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     rlimit rtprio 10 10
     ioprio rt 4
     task_profiles ProcessCapacityHigh HighPerformance
+    interface android.hardware.audio@7.1::IDevicesFactory default
+    interface android.hardware.audio@7.0::IDevicesFactory default
+    interface android.hardware.audio@6.0::IDevicesFactory default
+    interface android.hardware.audio@5.0::IDevicesFactory default
+    interface android.hardware.audio@4.0::IDevicesFactory default
+    interface android.hardware.audio.effect@7.0::IEffectsFactory default
+    interface android.hardware.audio.effect@6.0::IEffectsFactory default
+    interface android.hardware.audio.effect@5.0::IEffectsFactory default
+    interface android.hardware.audio.effect@4.0::IEffectsFactory default
     onrestart restart audioserver
 
 service vendor.audioadsprpcd_audiopd /vendor/bin/audioadsprpcd audiopd
