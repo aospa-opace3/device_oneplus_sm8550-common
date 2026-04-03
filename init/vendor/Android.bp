@@ -1,0 +1,12 @@
+//
+// Copyright (C) 2026 The Nexus Rom Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "android.hardware.bluetooth@1.1-service-qti.rc.sm8550-common",
+    filename: "android.hardware.bluetooth@1.1-service-qti.rc",
+    src: "android.hardware.bluetooth@1.1-service-qti.rc",
+    sub_dir: "init",
+    vendor: true,
+}
