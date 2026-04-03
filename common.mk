@@ -159,6 +159,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1-service-qti.rc.sm8550-common \
     fstab.default \
     fstab.default.vendor_ramdisk \
     init.class_main.sh \
